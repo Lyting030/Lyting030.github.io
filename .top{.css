@@ -88,6 +88,7 @@ ul li{
 }
 .fi{
     
+    
     display:contents;
     flex-wrap: wrap;
     align-items: center;
