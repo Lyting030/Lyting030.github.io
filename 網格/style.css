@@ -1,0 +1,130 @@
+.box{
+    width: 950px;
+    margin: auto; 
+    grid-template-columns: repeat(19, 50px);
+    grid-template-rows: repeat(25, 50px);
+    display: grid;
+}
+.box1{
+    
+    background-color: gray;
+    grid-area: 2/12/8/20;
+}
+section:nth-of-type(even) .box1{
+    grid-area: 2/8/10/17;
+}
+.img2{
+    grid-area: 4/4/9/9;
+}
+section:nth-last-of-type(even) .img2{
+    grid-area: 4/2/9/9;
+}
+.img3{
+    grid-area: 8/17/8/17;
+    z-index: 10;
+    display: flex;
+}
+section:nth-last-of-type(even) .img3{
+    grid-area: 8/2/8/17;
+}
+.box3{
+    width: 350px;
+}
+section:nth-last-of-type(even) .box3{
+    grid-area: 1/13/8/17;
+}
+.box3 span{
+    color: #fff;
+    writing-mode: vertical-lr;
+    font-size: 100px;
+    line-height: 50%;
+    font-weight: lighter;
+}
+.box3 h2{
+    color: #fff;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.item1{
+    background-color: #ae0014;
+    display: flex;
+    height: 130px;
+}
+
+.item1 span {
+    writing-mode: vertical-lr;
+    font-size: 100px;
+    line-height: 50%;
+    font-weight: lighter;
+}
+.item2{
+    width: 350px;
+    height: fit-content;
+    background-color: #000;
+    position: absolute;
+}
+.item2 h3{
+    font-size: 30px;
+    line-height: 200%;
+    margin: 10px;
+    color: aliceblue;
+    padding: -10px;
+}
+.item2 p{
+    font-size: 18px;
+    line-height: 150%;
+    margin: 10px;
+    color: #fff;
+}
+
+.box4{
+    width: 620px;
+    height: fit-content;
+    padding: 10px;
+    padding-bottom: 30px;
+    background-color: #EFEFEF;
+    grid-area: 12/2/12/15;
+    box-sizing: border-box;
+    z-index: 2;
+}
+.box4 .slg{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    line-height: 150%;
+    color: red;
+}
+.box4 .slg:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background-color: #f00;
+    flex-grow: 1;
+}
+.box4 h5{
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    width: fit-content;
+    padding:3px 10px;
+}
+.box4 p{
+    padding-left: 2em;
+    position:relative;
+    margin: -10px;
+}
+.box4 p:after{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #f00;
+    left: 1em;
+    top: 0.6em;
+}
+section:nth-last-of-type(even) .box4{
+    grid-area: 12/8/12/15;
+}
