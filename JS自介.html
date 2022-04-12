@@ -24,10 +24,10 @@
     </style>
 </head>
 <body>
-    <div class="main">
+    <div>
         <img id="image1" src="" alt="">
     </div>
-    <div class="main">
+    <div>
         <h1>姓名:</h1>
         <p>劉禮婷</p>
         <h1>Email:</h1>
@@ -36,33 +36,6 @@
         <p>秘密</p>
         <h1>興趣:</h1>
         <p>玩摩爾</p>
-    </div>
-    <div class="in">
-        <script>
-        
-            let img = document.getElementById("image1");
-    
-            
-            const personalUrl = "https://github.com/Lyting030/Filestorage/blob/main/IMG_20201011_144454.jpg?raw=true";
-            
-    
-            
-    
-            
-            img.src = personalUrl;
-    
-            img.setAttribute("src",personalUrl);
-            
-            img.setAttribute("class","picturestyle");
-            document.write("<br>");
-    
-            const imageArray =["https://picsum.photos/300/200/?random=10","https://picsum.photos/300/200/?random=10","https://picsum.photos/300/200/?random=10"];
-    
-            imageArray.forEach((item,index)=>{
-                document.write( `<img src=${item}>` + "<br>");
-            });
-    
-        </script>
     </div>
 
     <script>
@@ -86,7 +59,7 @@
         const imageArray =["https://picsum.photos/300/200/?random=10","https://picsum.photos/300/200/?random=10","https://picsum.photos/300/200/?random=10"];
 
         imageArray.forEach((item,index)=>{
-            document.write( `<img src=${item}>` + "<br>");
+            document.write( `<img src=${item}>` );
         });
 
     </script>
