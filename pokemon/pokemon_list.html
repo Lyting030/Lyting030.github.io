@@ -18,6 +18,7 @@
     </div>
     <script>
         let container;
+        let i=0;
 
         window.onload = function(){
             container = document.getElementById("container");
@@ -58,13 +59,25 @@
                 img.addEventListener("click",function(even){
                     container.removeChild(event.target);
                 });
+                
 
                 container.append(img);
             }
         }
 
         function AddPokemon(){
-            container.addChild(container.lastChild);
+                let filename=i.toString().padStart(3,"0");
+                //padstart:3位數，前面補0
+                let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${filename}.png`;
+
+                let img = document.createElement("img");
+                img.setAttribute("src",pathFile);
+            
+                container.append(img);
+                i++;
+                if(i>898){
+                    return 0;
+                }
         }
 
         function removePokemon(){
