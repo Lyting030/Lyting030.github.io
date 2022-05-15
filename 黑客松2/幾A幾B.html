@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>幾A幾B</title>
+    <style>
+        .container{
+            padding: auto;
+            width: 600px;
+        }
+        .btn-group{
+            width: 500px;
+        }
+        .input-group{
+            width: 500px;
+        }
+        .result{
+            border-radius: 5px;
+            padding: 5px;
+            width: 60px;
+            background-color: red;
+        }
+        .input-value{
+            padding: 5px;
+            width: fit-content;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary start">開始</button>
+        <button type="button" class="btn btn-outline-primary reset">重來</button>
+        <button type="button" class="btn btn-outline-primary ans">答案</button>
+        </div>
+        <div class="process">
+            <div class="result"></div>
+            <div class="inputvalue"></div>
+        </div>
+        <div class="input-group mb-3 mt-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">猜答案</span>
+            <input type="text" class="input form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="guess btn btn-outline-secondary" type="button" id="button-addon2">猜</button>
+        </div>
+      </div>
+      
+      <script>
+            let start, reset, ans, result, inputvalue, input, guess;
+            let random_ans = [];
+
+            window.onload =function(){
+                start = document.querySelector('.start')
+                reset = document.querySelector('.reset')
+                ans = document.querySelector('.ans')
+                result = document.querySelector('.result')
+                inputvalue = document.querySelector('.inputvalue')
+                input = document.querySelector('.input')
+                guess = document.querySelector('.guess')
+                
+                start.addEventListener('click',()=>{
+                    for(let i=0;random_ans<4;i++){
+                        let num = Math.floor(Math.random()*10)
+                        if(random_ans.includes(num)){
+                            num = Math.floor(Math.random()*10)
+                        }
+                        else{
+                            random_ans.push(num)
+                        }
+                    }
+                })
+                
+
+            }
+
+
+      </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
